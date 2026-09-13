@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hobbies | Harikrishnan S</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+.hobby-intro{
+    max-width:760px;
+    margin:0 auto 3.5rem;
+    text-align:center;
+}
+
+.hobby-intro p{
+    color:#666;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.hobby-section{
+    margin-bottom:4.5rem;
+}
+
+.hobby-section-header{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:1.5rem;
+    border-bottom:1px solid #e6e6e6;
+    padding-bottom:.8rem;
+}
+
+.hobby-section-header h2{
+    margin:0;
+    font-size:1.55rem;
+}
+
+.hobby-section-header span{
+    color:#888;
+    font-size:.85rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+
+/* ================= GALLERY ================= */
+
+.hobby-gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.2rem;
+}
+
+.hobby-item{
+    position:relative;
+    overflow:hidden;
+    background:#f5f5f5;
+    border:1px solid #e8e8e8;
+    aspect-ratio:1.15/1;
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.hobby-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+
+.hobby-item img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .4s ease;
+}
+
+.hobby-item:hover img{
+    transform:scale(1.04);
+}
+
+
+/* ================= IMAGE TITLE ================= */
+
+.hobby-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:.9rem 1rem;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.75)
+    );
+    color:white;
+}
+
+.hobby-caption h3{
+    margin:1rem 0 0;
+    font-size:.95rem;
+    font-weight:500;
+    letter-spacing:.03em;
+}
+
+
+/* Hide descriptions completely */
+
+.hobby-caption p{
+    display:none;
+}
+
+
+/* ================= WRITING ================= */
+
+.writing-card{
+    border:1px solid #e8e8e8;
+    padding:2rem;
+    background:#fff;
+}
+
+.writing-card h2{
+    margin-top:.5rem;
+}
+
+.writing-card p{
+    color:#666;
+    line-height:1.8;
+    max-width:760px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+    .hobby-gallery{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .hobby-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .hobby-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .hobby-section-header{
+        display:block;
+    }
+
+    .hobby-section-header span{
+        display:block;
+        margin-top:.35rem;
+    }
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+<div class="nav-container">
+<div class="logo">Harikrishnan S</div>
+<div class="nav-links">
+<a href="index.html">About</a>
+<a href="index.html#research">Research</a>
+<a href="index.html#skills">Skills</a>
+<a href="index.html#publications">Publications</a>
+<a href="projects.html">Projects</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="index.html#education">Education</a>
+<a href="index.html#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<section class="page-header">
+<h1>Hobbies</h1>
+<p>A small collection of things I enjoy creating outside research and engineering.</p>
+</section>
+
+<main class="projects-container">
+
+
+
+<section class="hobby-section">
+<div class="hobby-section-header">
+<h2>Origami</h2>
+<span>Paper · Geometry · Patience</span>
+</div>
+
+<div class="hobby-gallery">
+<article class="hobby-item"><img src="images/im1.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im2.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im3.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im4.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im5.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im6.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im7.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im8.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im9.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im10.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im11.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im12.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im13.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im14.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im15.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im16.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im17.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im18.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im19.jpg" alt="Origami work 01"></article>
+
+<article class="hobby-item"><img src="images/im21.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im22.jpg" alt="Origami work 01"></article>
+
+<article class="hobby-item"><img src="images/im24.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im25.jpg" alt="Origami work 02"></article>
+<article class="hobby-item"><img src="images/im26.webp" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im27.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im28.webp" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im29.webp" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im30.webp" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im31.webp" alt="Origami work 01"></article>
+
+</div>
+</section>
+
+<section class="hobby-section">
+<div class="hobby-section-header">
+<h2>Comics</h2>
+<span>Sketching · Stories · Experiments</span>
+</div>
+
+<div class="hobby-gallery">
+<article class="hobby-item"><img src="images/im20.jpg" alt="Origami work 01"></article>
+<article class="hobby-item"><img src="images/im23.jpg" alt="Origami work 01"></article>
+</div>
+</section>
+
+<section class="hobby-section">
+<div class="hobby-section-header">
+<h2>Writing</h2>
+<span>Short Stories</span>
+</div>
+
+<article class="writing-card">
+<span class="project-category">SHORT STORY</span>
+<h2>The Last Newspaper I read</h2>
+<p>A short piece of fiction that I wrote for fun. I am keeping this section
+small for now, but hopefully there will be more stories here in the future.</p>
+<a href="files/short_story.pdf" class="read-more">Read the story →</a>
+</article>
+</section>
+
+</main>
+
+<footer><p>© 2026 Harikrishnan S</p></footer>
+</body>
+</html>

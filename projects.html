@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Harikrishnan S</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                Harikrishnan S
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="index.html#research">Research</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#publications">Publications</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="tutorials.html">Hobbies</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <div class="page-header-inner">
+
+            <span class="page-label">RESEARCH & ENGINEERING</span>
+
+            <h1>Projects</h1>
+
+            <p>
+                I do strongly believe that knowledge is gained, only when you share it. Here are some basic projects / ideas (most of them are open-sourced) which I had worked on and feel
+                will be useful for practioneers. More will be updated over time. Let me know your comments!! 
+
+            </p>
+
+            <p >
+                Further I would like to acknowledge the contributions from <a href="https://iitpkd.ac.in/people/earunrahul"
+               target="_blank"
+               rel="noopener noreferrer"
+                >Dr Arun Rahul S</a>, Associate Professor, EE Dept,  IIT Palakkad,  who has been a key part in almost all 
+                the works I am presenting here.
+                </p> 
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <main class="projects-container">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                01
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    POWER ELECTRONICS / DRIVES / CONTROL
+                </span>
+
+                <h2>
+                    Discrete-Time Plant Modeling for Efficient Validation of Control Systems
+                </h2>
+
+                <p class="project-description">
+                    Control strategies are often validated using MATLAB/PLECS plant models whose accuracy depends on the numerical solver
+                     and simulation step size. This project presents an alternative approach in which the PMSM plant is explicitly 
+                     discretized and executed at a sub-microsecond time step, while the control algorithm operates at its 
+                     intended sampling period (100 uS). A comparative study with conventional solver-based 
+                     simulation is presented to evaluate the accuracy and effectiveness of the proposed approach.
+                </p>
+
+                
+
+                <div class="project-buttons">
+
+                    <a href="files/2_portfolio_basic_modelling.pdf"
+                       class="button"
+                       download>
+                        Download Report
+                    </a>
+
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                02
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    MOTOR DRIVES
+                </span>
+
+                <h2>
+                    Modelling of DC Motor in Qspice 
+                </h2>
+
+                <p class="project-description">
+                    In this work , the mathematical model of a PMDC motor is realised in Qspice using two approaches : First approach 
+                    using resistors, inductors and voltage sources , then second approach using the discrete model approach implemented inside a c-script in
+                    Qspice
+                </p>
+
+
+
+                <div class="project-buttons">
+
+                    <a href="files/dc_motor_basic.zip"
+                       class="button"
+                       download>
+                        Download Simulation Files
+                    </a>
+
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                03
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-category">
+                    MOTOR DRIVES / CONTROL
+                </span>
+
+                <h2>
+                  Cascaded PI based Closed loop Speed Control of a DC motor in Qspice
+                </h2>
+
+                <p class="project-description">
+                    In this work , the previously modelled DC motor is controlled using the cascaded speed control scheme in Qspice. The 
+                    control algorithm is implemented inside a C++ script module and executed at every 100 microsecond.
+                </p>
+
+                
+
+                <div class="project-buttons">
+
+                    <a href="files/dc_motor_basic_2.zip"
+                       class="button"
+                       download>
+                        Download Simulation Files
+                    </a>
+
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+<!-- PROJECT 4 -->
+
+<article class="project-card">
+
+    <div class="project-number">
+        04
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            SOFTWARE / EMBEDDED SYSTEMS
+        </span>
+
+        <h2>
+            QSPICE C++ to C2000 C Code Converter
+        </h2>
+
+        <p class="project-description">
+            QSPICE allows custom C++ code to be incorporated into circuit
+            simulations, but the simulation-oriented code often requires
+            significant restructuring before it can be deployed on TI C2000
+            DSPs. This project presents a lightweight software tool that
+            converts QSPICE C++ code into organized <code>.c</code> and
+            <code>.h</code> files suitable for C2000-based embedded
+            implementation, reducing manual code restructuring and
+            accelerating the transition from simulation to real-time control. For access to the <code>.exe</code> file, 
+            please contact me at
+            <a href="mailto:shhm.1965@gmail.com">shhm.1965@gmail.com</a>.
+        </p>
+
+  
+
+        <div class="project-buttons">
+
+            <a href="https://youtu.be/c79LO3I3VkU?si=iqLacxEKfKTCh8cw"
+               class="button"
+               target="_blank"
+               rel="noopener noreferrer">
+                Watch Demonstration
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- PROJECT 5 -->
+
+<article class="project-card">
+
+    <div class="project-number">
+        05
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            PCB DESIGN
+        </span>
+
+        <h2>
+            Basic Half bridge circuit featuring IRF840 Mosfet and IR2112 bootstrap Gate Driver
+        </h2>
+
+        <p class="project-description">
+    A compact half-bridge power stage built around the IR2112 bootstrap gate driver featuring IRF840.
+    Originally designed for a synchronous buck converter with provisions to connect inductors externally, the circuit can also be
+    configured as an independent half-bridge. The board includes provisions for voltage sensing and ACS712-based
+    current sensing, making it suitable for rapid prototyping and testing of
+    power-electronic converter topologies.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/9_portfolio_buck.pdf"
+                       class="button"
+                       download>
+                        Download Schematic
+                    </a>
+
+
+
+                </div>
+
+    </div>
+
+</article>
+
+
+<!-- PROJECT 6 -->
+
+<article class="project-card">
+
+    <div class="project-number">
+        06
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            PCB DESIGN
+        </span>
+
+        <h2>
+            Signal Conditioning Board for TMS320F28379D
+        </h2>
+
+        <p class="project-description">
+   C2000Ware-based DSPs are widely used in power electronics research labs, but
+    interfacing the DSP with power converters and sensor boards often involves
+    dozens of jumper wires, making prototyping cumbersome and fault diagnosis
+    difficult. To address this, we developed a dedicated PCB extension board for the
+    TMS320F28379D, featuring integrated signal-conditioning stages, including
+    level shifters, filters, and anti-aliasing filters, along with a structured
+    pin arrangement for cleaner and faster prototyping. Watch the video to learn
+    more about the design and its features.
+        </p>
+
+  
+<div class="project-buttons">
+
+            <a href="https://youtu.be/-EarZSWZVpc"
+               class="button"
+               target="_blank"
+               rel="noopener noreferrer">
+                Watch Video
+            </a>
+
+    </div>
+
+</article>
+
+
+<!-- PROJECT 7 -->
+
+<article class="project-card">
+
+    <div class="project-number">
+        07
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            PCB DESIGN
+        </span>
+
+        <h2>
+            A Low Voltage Regulator - (DC Output 15V , 0 , -5V)
+        </h2>
+
+        <p class="project-description">
+            In this work, a very basic voltage regulator is realised using ICs 7815, 7805 , 7905 to obtain dc output voltage levels of +15V , 0V and -5V from 230V ac input.
+            May be utilized for gate driver supplies or for small power applications.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/11_portfolio_lvr.pdf"
+                       class="button"
+                       download>
+                        Download Schematic
+                    </a>
+
+
+
+                </div>
+
+    </div>
+</article>
+
+    <!-- PROJECT 8 -->
+
+<article class="project-card">
+
+    <div class="project-number">
+        08
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            DRIVES / CONTROL
+        </span>
+
+        <h2>
+            Sensor Calibration
+        </h2>
+
+        <p class="project-description">
+           In this project, an ACS772
+    current sensor with an external gain stage was calibrated against a reference
+    current measurement using experimental data and linear regression. The
+    calibration code automatically determines the sensor gain and offset,
+    evaluates their variation across data segments, and compares the calibrated
+    output with the reference measurement. The results highlight the importance
+    of experimentally validating sensor characteristics rather than relying
+    solely on nominal datasheet values.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/12_calibration_code.pdf"
+                       class="button"
+                       download>
+                        Download Report
+                    </a>
+
+
+                    <a href="files/sensor_calibration.m"
+                       class="button"
+                       download>
+                        Download Code
+                    </a>
+
+                </div>
+                
+
+    </div>
+
+</article>
+
+   <!-- PROJECT 9 -->
+
+<article class="project-card">
+
+    <div class="project-number">
+        09
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            POWER ELECTRONICS / MAGNETICS
+        </span>
+
+        <h2>
+            BH Curve of a Transformer
+        </h2>
+
+        <p class="project-description">
+          This project was originally designed as a UG lab experiment here at IIT Palakkad. It is basically a simple approach to trace the BH Curve 
+          of any given transformer.  You can find the Matlab code in the report.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/13_portfolio_BH_curve.pdf"
+                       class="button"
+                       download>
+                        Download Report
+                    </a>
+
+
+
+
+                </div>
+                
+
+    </div>
+
+</article>
+
+
+   <!-- PROJECT 10-->
+
+<article class="project-card">
+
+    <div class="project-number">
+        10
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            POWER ELECTRONICS / CONTROL
+        </span>
+
+        <h2>
+            Voltage control of a buck controller - PI controller : Analog Implementation - Qspice 
+        </h2>
+
+        <p class="project-description">
+          In this project, a single loop PI based voltage control of  a very primitve synchronous buck converter is realised in Qspice using Opamps. 
+          This would be a good starting point for begineers to analyse the closed loop architecture and control aspects.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/buck_conv_control.zip"
+                       class="button"
+                       download>
+                        Download Simulation File
+                    </a>
+
+
+
+
+                </div>
+                
+
+    </div>
+
+</article>
+
+  <!-- PROJECT 11-->
+
+<article class="project-card">
+
+    <div class="project-number">
+        11
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            POWER ELECTRONICS / CONTROL / DRIVES
+        </span>
+
+        <h2>
+            PMDC Motor Parameter Estimation - A systematic Approach
+        </h2>
+
+        <p class="project-description">
+          In this project, a systematic approach for determination of the electrical and mechanical parameters of a PMDC drive is presented. Same
+          philosophies can be extended to other motor drives also.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/15_portfolio_pmdc_parameter_estimation.pdf"
+                       class="button"
+                       download>
+                        Download Report
+                    </a>
+
+
+
+
+                </div>
+                
+
+    </div>
+
+</article>
+
+Many more coming soon....
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Harikrishnan S
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
