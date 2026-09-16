@@ -8,6 +8,7 @@
     <title>Projects | Harikrishnan S</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
 
 </head>
 
@@ -41,29 +42,13 @@
 
     <!-- PAGE HEADER -->
 
-    <section class="page-header">
-
+    <section class="page-header projects-hero">
         <div class="page-header-inner">
-
             <span class="page-label">RESEARCH & ENGINEERING</span>
-
             <h1>Projects</h1>
-
-            <p>
-                I do strongly believe that knowledge is gained, only when you share it. Here are some basic projects / ideas (most of them are open-sourced) which I had worked on and feel
-                will be useful for practioneers. More will be updated over time. Let me know your comments!! 
-
-            </p>
-
-            <p >
-                Further I would like to acknowledge the contributions from <a href="https://iitpkd.ac.in/people/earunrahul"
-               target="_blank"
-               rel="noopener noreferrer"
-                >Dr Arun Rahul S</a>, Associate Professor, EE Dept,  IIT Palakkad,  who has been a key part in almost all 
-                the works I am presenting here.
-                </p> 
+            <p> I do believe that knowledge is gained only when you share it. Here is a collection of projects developed around power electronics, electric drives, embedded control, simulation, and practical engineering tools. Most of the material is open-sourced and intended to be useful for students and practitioners.</p>
+            <p>I would also like to acknowledge the contributions from <a href="https://iitpkd.ac.in/people/earunrahul" target="_blank" rel="noopener noreferrer">Dr Arun Rahul S</a>, Associate Professor, EE Dept., IIT Palakkad, who has been a key contributor to almost all of the work presented here.</p>
         </div>
-
     </section>
 
 
@@ -71,10 +56,28 @@
 
     <main class="projects-container">
 
+        <div class="project-intro-row">
+            <div>
+                <span class="page-label">PROJECT ARCHIVE</span>
+                <h2>Engineering Work</h2>
+            </div>
+            <span class="project-count"><span id="visible-count">11</span> projects</span>
+        </div>
+
+        <div class="project-filters" role="group" aria-label="Filter projects">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="research">Research</button>
+            <button class="filter" data-filter="control">Control</button>
+            <button class="filter" data-filter="hardware">Hardware</button>
+            <button class="filter" data-filter="simulation">Simulation</button>
+            <button class="filter" data-filter="software">Software</button>
+        </div>
+
+
 
         <!-- PROJECT 1 -->
 
-        <article class="project-card">
+        <article class="project-card archive-project" data-category="research control">
 
             <div class="project-number">
                 01
@@ -83,7 +86,7 @@
             <div class="project-content">
 
                 <span class="project-category">
-                    POWER ELECTRONICS / DRIVES / CONTROL SYSTEMS
+                    POWER ELECTRONICS / DRIVES / CONTROL
                 </span>
 
                 <h2>
@@ -99,6 +102,8 @@
                 </p>
 
                 
+
+                <div class="project-tags"><span>MATLAB</span><span>PLECS</span><span>DISCRETE-TIME MODELING</span><span>CONTROL</span></div>
 
                 <div class="project-buttons">
 
@@ -119,7 +124,7 @@
 
         <!-- PROJECT 2 -->
 
-        <article class="project-card">
+        <article class="project-card archive-project" data-category="simulation control">
 
             <div class="project-number">
                 02
@@ -143,6 +148,8 @@
 
 
 
+                <div class="project-tags"><span>QSPICE</span><span>PMDC</span><span>C-SCRIPT</span></div>
+
                 <div class="project-buttons">
 
                     <a href="files/dc_motor_basic.zip"
@@ -162,7 +169,7 @@
 
         <!-- PROJECT 3 -->
 
-        <article class="project-card">
+        <article class="project-card archive-project" data-category="simulation control">
 
             <div class="project-number">
                 03
@@ -203,7 +210,7 @@
 
 <!-- PROJECT 4 -->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="software control simulation">
 
     <div class="project-number">
         04
@@ -234,7 +241,9 @@
 
   
 
-        <div class="project-buttons">
+        <div class="project-tags"><span>QSPICE</span><span>C++</span><span>C2000</span><span>EMBEDDED</span></div>
+
+                <div class="project-buttons">
 
             <a href="https://youtu.be/c79LO3I3VkU?si=iqLacxEKfKTCh8cw"
                class="button"
@@ -252,7 +261,7 @@
 
 <!-- PROJECT 5 -->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="hardware">
 
     <div class="project-number">
         05
@@ -278,6 +287,8 @@
 
   
 
+                <div class="project-tags"><span>IR2112</span><span>IRF840</span><span>ACS712</span><span>PCB</span></div>
+
                 <div class="project-buttons">
 
                     <a href="files/9_portfolio_buck.pdf"
@@ -297,7 +308,7 @@
 
 <!-- PROJECT 6 -->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="hardware control">
 
     <div class="project-number">
         06
@@ -325,7 +336,9 @@
         </p>
 
   
-<div class="project-buttons">
+<div class="project-tags"><span>C2000</span><span>TMS320F28379D</span><span>FILTERS</span><span>PCB</span></div>
+
+                <div class="project-buttons">
 
             <a href="https://youtu.be/-EarZSWZVpc"
                class="button"
@@ -341,7 +354,7 @@
 
 <!-- PROJECT 7 -->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="hardware">
 
     <div class="project-number">
         07
@@ -381,7 +394,7 @@
 
     <!-- PROJECT 8 -->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="research control">
 
     <div class="project-number">
         08
@@ -434,7 +447,7 @@
 
    <!-- PROJECT 9 -->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="research hardware">
 
     <div class="project-number">
         09
@@ -457,6 +470,8 @@
 
   
 
+                <div class="project-tags"><span>MAGNETICS</span><span>MATLAB</span><span>EXPERIMENTAL</span></div>
+
                 <div class="project-buttons">
 
                     <a href="files/13_portfolio_BH_curve.pdf"
@@ -478,7 +493,7 @@
 
    <!-- PROJECT 10-->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="simulation control">
 
     <div class="project-number">
         10
@@ -521,7 +536,7 @@
 
   <!-- PROJECT 11-->
 
-<article class="project-card">
+<article class="project-card archive-project" data-category="research control">
 
     <div class="project-number">
         11
@@ -562,7 +577,52 @@
 
 </article>
 
-Many more coming soon....
+ <!-- PROJECT 12-->
+
+<article class="project-card archive-project" data-category="research hardware software">
+
+    <div class="project-number">
+        12
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            POWER ELECTRONICS / CONTROL / TMS320F28379D
+        </span>
+
+        <h2>
+            Generic & Modular Code for TMS320F28379D
+        </h2>
+
+        <p class="project-description">
+          Here is a generic and modular code written for TMS320F28379D. All peripherals are declared including adc, dac , epwm etc. 
+          Further all codes are written as individual .c and .h fashion. Basic codes like cascaded PI control , protection ,
+           adc sensing , abc / dq transformations are all included. Download the project file here. Do install control suite and c2000ware before proceeding.
+        </p>
+
+  
+
+                <div class="project-buttons">
+
+                    <a href="files/modular_workspace_hari.zip"
+                       class="button"
+                       download>
+                        Download Project File
+                    </a>
+
+
+
+
+                </div>
+                
+
+    </div>
+
+</article>
+
+
+<div class="more-projects"><span></span><p>More projects are currently being developed and documented.</p><span></span></div>
 
 
     </main>
@@ -576,6 +636,39 @@ Many more coming soon....
 
     </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".filter");
+    const projects = document.querySelectorAll(".archive-project");
+    const counter = document.getElementById("visible-count");
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+            let visible = 0;
+
+            buttons.forEach(function (b) {
+                b.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            projects.forEach(function (project) {
+                const categories = project.getAttribute("data-category").split(" ");
+
+                if (filter === "all" || categories.includes(filter)) {
+                    project.style.display = "grid";
+                    visible++;
+                } else {
+                    project.style.display = "none";
+                }
+            });
+
+            counter.textContent = visible;
+        });
+    });
+});
+</script>
 </body>
 
 </html>
