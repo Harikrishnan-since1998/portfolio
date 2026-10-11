@@ -9,6 +9,107 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/projects.css">
+    <style>
+        /* =========================================================
+           PROJECT ARCHIVE GRID
+           ========================================================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 22px;
+            width: 100%;
+        }
+
+        .projects-grid .project-card.archive-project {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            margin: 0;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        .projects-grid .project-card.archive-project .project-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: none;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        .projects-grid .project-card.archive-project.hidden-project {
+            display: none !important;
+        }
+
+        /* =========================================================
+           READ MORE / READ LESS
+           ========================================================= */
+
+        .project-description-wrap {
+            margin: 0 0 17px;
+        }
+
+        .project-description-wrap .project-description {
+            margin: 0;
+        }
+
+        .project-description-wrap .project-description.is-collapsed {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            overflow: hidden;
+        }
+
+        .read-more-btn {
+            display: none;
+            margin-top: 8px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: #315b7d;
+            font-family: inherit;
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .read-more-btn:hover {
+            color: #17324d;
+            text-decoration: underline;
+        }
+
+        .read-more-btn:focus-visible {
+            outline: 2px solid #315b7d;
+            outline-offset: 3px;
+        }
+
+        .project-description-wrap.has-overflow .read-more-btn {
+            display: inline-block;
+        }
+
+        .project-description-wrap .project-description.is-expanded {
+            display: block;
+            overflow: visible;
+        }
+
+        @media (max-width: 950px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+
 
 </head>
 
@@ -61,7 +162,7 @@
                 <span class="page-label">PROJECT ARCHIVE</span>
                 <h2>Engineering Work</h2>
             </div>
-            <span class="project-count"><span id="visible-count">11</span> projects</span>
+            <span class="project-count"><span id="visible-count">12</span> projects</span>
         </div>
 
         <div class="project-filters" role="group" aria-label="Filter projects">
@@ -73,7 +174,7 @@
             <button class="filter" data-filter="software">Software</button>
         </div>
 
-
+        <div class="projects-grid">
 
         <!-- PROJECT 1 -->
 
@@ -93,13 +194,20 @@
                     Discrete-Time Plant Modeling for Efficient Validation of Control Systems
                 </h2>
 
-                <p class="project-description">
-                    Control strategies are often validated using MATLAB/PLECS plant models whose accuracy depends on the numerical solver
+                <div class="project-description-wrap">
+
+
+                    <p class="project-description">Control strategies are often validated using MATLAB/PLECS plant models whose accuracy depends on the numerical solver
                      and simulation step size. This project presents an alternative approach in which the PMSM plant is explicitly 
                      discretized and executed at a sub-microsecond time step, while the control algorithm operates at its 
                      intended sampling period (100 uS). A comparative study with conventional solver-based 
-                     simulation is presented to evaluate the accuracy and effectiveness of the proposed approach.
-                </p>
+                     simulation is presented to evaluate the accuracy and effectiveness of the proposed approach.</p>
+
+
+                    <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+                </div>
 
                 
 
@@ -140,11 +248,18 @@
                     Modelling of DC Motor in Qspice 
                 </h2>
 
-                <p class="project-description">
-                    In this work , the mathematical model of a PMDC motor is realised in Qspice using two approaches : First approach 
+                <div class="project-description-wrap">
+
+
+                    <p class="project-description">In this work , the mathematical model of a PMDC motor is realised in Qspice using two approaches : First approach 
                     using resistors, inductors and voltage sources , then second approach using the discrete model approach implemented inside a c-script in
-                    Qspice
-                </p>
+                    Qspice</p>
+
+
+                    <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+                </div>
 
 
 
@@ -185,10 +300,17 @@
                   Cascaded PI based Closed loop Speed Control of a DC motor in Qspice
                 </h2>
 
-                <p class="project-description">
-                    In this work , the previously modelled DC motor is controlled using the cascaded speed control scheme in Qspice. The 
-                    control algorithm is implemented inside a C++ script module and executed at every 100 microsecond.
-                </p>
+                <div class="project-description-wrap">
+
+
+                    <p class="project-description">In this work , the previously modelled DC motor is controlled using the cascaded speed control scheme in Qspice. The 
+                    control algorithm is implemented inside a C++ script module and executed at every 100 microsecond.</p>
+
+
+                    <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+                </div>
 
                 
 
@@ -226,8 +348,10 @@
             QSPICE C++ to C2000 C Code Converter
         </h2>
 
-        <p class="project-description">
-            QSPICE allows custom C++ code to be incorporated into circuit
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">QSPICE allows custom C++ code to be incorporated into circuit
             simulations, but the simulation-oriented code often requires
             significant restructuring before it can be deployed on TI C2000
             DSPs. This project presents a lightweight software tool that
@@ -236,8 +360,13 @@
             implementation, reducing manual code restructuring and
             accelerating the transition from simulation to real-time control. For access to the <code>.exe</code> file, 
             please contact me at
-            <a href="mailto:shhm.1965@gmail.com">shhm.1965@gmail.com</a>.
-        </p>
+            <a href="mailto:shhm.1965@gmail.com">shhm.1965@gmail.com</a>.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -277,13 +406,20 @@
             Basic Half bridge circuit featuring IRF840 Mosfet and IR2112 bootstrap Gate Driver
         </h2>
 
-        <p class="project-description">
-    A compact half-bridge power stage built around the IR2112 bootstrap gate driver featuring IRF840.
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">A compact half-bridge power stage built around the IR2112 bootstrap gate driver featuring IRF840.
     Originally designed for a synchronous buck converter with provisions to connect inductors externally, the circuit can also be
     configured as an independent half-bridge. The board includes provisions for voltage sensing and ACS712-based
     current sensing, making it suitable for rapid prototyping and testing of
-    power-electronic converter topologies.
-        </p>
+    power-electronic converter topologies.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -324,16 +460,23 @@
             Signal Conditioning Board for TMS320F28379D
         </h2>
 
-        <p class="project-description">
-   C2000Ware-based DSPs are widely used in power electronics research labs, but
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">C2000Ware-based DSPs are widely used in power electronics research labs, but
     interfacing the DSP with power converters and sensor boards often involves
     dozens of jumper wires, making prototyping cumbersome and fault diagnosis
     difficult. To address this, we developed a dedicated PCB extension board for the
     TMS320F28379D, featuring integrated signal-conditioning stages, including
     level shifters, filters, and anti-aliasing filters, along with a structured
     pin arrangement for cleaner and faster prototyping. Watch the video to learn
-    more about the design and its features.
-        </p>
+    more about the design and its features.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 <div class="project-tags"><span>C2000</span><span>TMS320F28379D</span><span>FILTERS</span><span>PCB</span></div>
@@ -370,10 +513,17 @@
             A Low Voltage Regulator - (DC Output 15V , 0 , -5V)
         </h2>
 
-        <p class="project-description">
-            In this work, a very basic voltage regulator is realised using ICs 7815, 7805 , 7905 to obtain dc output voltage levels of +15V , 0V and -5V from 230V ac input.
-            May be utilized for gate driver supplies or for small power applications.
-        </p>
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">In this work, a very basic voltage regulator is realised using ICs 7815, 7805 , 7905 to obtain dc output voltage levels of +15V , 0V and -5V from 230V ac input.
+            May be utilized for gate driver supplies or for small power applications.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -410,16 +560,23 @@
             Sensor Calibration
         </h2>
 
-        <p class="project-description">
-           In this project, an ACS772
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">In this project, an ACS772
     current sensor with an external gain stage was calibrated against a reference
     current measurement using experimental data and linear regression. The
     calibration code automatically determines the sensor gain and offset,
     evaluates their variation across data segments, and compares the calibrated
     output with the reference measurement. The results highlight the importance
     of experimentally validating sensor characteristics rather than relying
-    solely on nominal datasheet values.
-        </p>
+    solely on nominal datasheet values.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -463,10 +620,17 @@
             BH Curve of a Transformer
         </h2>
 
-        <p class="project-description">
-          This project was originally designed as a UG lab experiment here at IIT Palakkad. It is basically a simple approach to trace the BH Curve 
-          of any given transformer.  You can find the Matlab code in the report.
-        </p>
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">This project was originally designed as a UG lab experiment here at IIT Palakkad. It is basically a simple approach to trace the BH Curve 
+          of any given transformer.  You can find the Matlab code in the report.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -509,10 +673,17 @@
             Voltage control of a buck controller - PI controller : Analog Implementation - Qspice 
         </h2>
 
-        <p class="project-description">
-          In this project, a single loop PI based voltage control of  a very primitve synchronous buck converter is realised in Qspice using Opamps. 
-          This would be a good starting point for begineers to analyse the closed loop architecture and control aspects.
-        </p>
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">In this project, a single loop PI based voltage control of  a very primitve synchronous buck converter is realised in Qspice using Opamps. 
+          This would be a good starting point for begineers to analyse the closed loop architecture and control aspects.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -552,10 +723,17 @@
             PMDC Motor Parameter Estimation - A systematic Approach
         </h2>
 
-        <p class="project-description">
-          In this project, a systematic approach for determination of the electrical and mechanical parameters of a PMDC drive is presented. Same
-          philosophies can be extended to other motor drives also.
-        </p>
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">In this project, a systematic approach for determination of the electrical and mechanical parameters of a PMDC drive is presented. Same
+          philosophies can be extended to other motor drives also.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -595,11 +773,18 @@
             Generic & Modular Code for TMS320F28379D
         </h2>
 
-        <p class="project-description">
-          Here is a generic and modular code written for TMS320F28379D. All peripherals are declared including adc, dac , epwm etc. 
+        <div class="project-description-wrap">
+
+
+            <p class="project-description">Here is a generic and modular code written for TMS320F28379D. All peripherals are declared including adc, dac , epwm etc. 
           Further all codes are written as individual .c and .h fashion. Basic codes like cascaded PI control , protection ,
-           adc sensing , abc / dq transformations are all included. Download the project file here. Do install control suite and c2000ware before proceeding.
-        </p>
+           adc sensing , abc / dq transformations are all included. Download the project file here. Do install control suite and c2000ware before proceeding.</p>
+
+
+            <button class="read-more-btn" type="button" aria-expanded="false">Read more</button>
+
+
+        </div>
 
   
 
@@ -622,7 +807,9 @@
 </article>
 
 
-<div class="more-projects"><span></span><p>More projects are currently being developed and documented.</p><span></span></div>
+        </div>
+
+        <div class="more-projects"><span></span><p>More projects are currently being developed and documented.</p><span></span></div>
 
 
     </main>
@@ -638,35 +825,113 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================================
+       PROJECT FILTER
+       ========================================================= */
+
     const buttons = document.querySelectorAll(".filter");
-    const projects = document.querySelectorAll(".archive-project");
+    const projects = document.querySelectorAll(
+        ".projects-grid .archive-project"
+    );
     const counter = document.getElementById("visible-count");
 
     buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const filter = this.getAttribute("data-filter");
-            let visible = 0;
 
-            buttons.forEach(function (b) {
-                b.classList.remove("active");
+        button.addEventListener("click", function () {
+
+            const selectedFilter = this.dataset.filter;
+            let visibleCount = 0;
+
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
             });
 
             this.classList.add("active");
 
             projects.forEach(function (project) {
-                const categories = project.getAttribute("data-category").split(" ");
 
-                if (filter === "all" || categories.includes(filter)) {
-                    project.style.display = "grid";
-                    visible++;
+                const categories =
+                    project.dataset.category.split(/\s+/);
+
+                const shouldShow =
+                    selectedFilter === "all" ||
+                    categories.includes(selectedFilter);
+
+                if (shouldShow) {
+                    project.classList.remove("hidden-project");
+                    visibleCount++;
                 } else {
-                    project.style.display = "none";
+                    project.classList.add("hidden-project");
                 }
+
             });
 
-            counter.textContent = visible;
+            counter.textContent = visibleCount;
         });
+
     });
+
+
+    /* =========================================================
+       READ MORE / READ LESS
+       ========================================================= */
+
+    const descriptionBlocks = document.querySelectorAll(
+        ".project-description-wrap"
+    );
+
+    descriptionBlocks.forEach(function (block) {
+
+        const description = block.querySelector(".project-description");
+        const button = block.querySelector(".read-more-btn");
+
+        if (!description || !button) {
+            return;
+        }
+
+        description.classList.add("is-collapsed");
+
+        requestAnimationFrame(function () {
+
+            const hasOverflow =
+                description.scrollHeight > description.clientHeight + 2;
+
+            if (hasOverflow) {
+                block.classList.add("has-overflow");
+            } else {
+                description.classList.remove("is-collapsed");
+            }
+
+        });
+
+        button.addEventListener("click", function () {
+
+            const expanded =
+                description.classList.contains("is-expanded");
+
+            if (expanded) {
+
+                description.classList.remove("is-expanded");
+                description.classList.add("is-collapsed");
+
+                button.textContent = "Read more";
+                button.setAttribute("aria-expanded", "false");
+
+            } else {
+
+                description.classList.remove("is-collapsed");
+                description.classList.add("is-expanded");
+
+                button.textContent = "Read less";
+                button.setAttribute("aria-expanded", "true");
+
+            }
+
+        });
+
+    });
+
 });
 </script>
 </body>
